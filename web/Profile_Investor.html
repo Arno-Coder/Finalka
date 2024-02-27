@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="css/Profile_investor.css" />
+    <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/sticky-js@1.3.0/dist/sticky.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
+
+    <title>Profile Page for Investor</title>
+
+</head>
+
+<body class="flex-column">
+    <header class="header">
+        <section class="section1" style="--src:url(../assets/0502f0f63cc56790c6952133ae2b1481.png)">
+            <div class="content_box">
+                
+               <div class="searchBox">
+                   <input class="searchInput"type="text" name="" placeholder="Search">
+                     <button class="searchButton" href="#">
+                        <i class="fa fa-search"></i>
+                     </button>
+                </div>
+                <a class="subtitle1" href="Unauth_Main.html"><h3>STELLAR<br/>INVESTMENT</h3></a> </p> 
+
+                <a class="subtitle2" href="#"><h3>Projects</h3></a>
+                <a class="subtitle21" href="#"><h3>Home</h3></a>
+              
+                <img class="image4" src="./assets/ace06293b0d4076285adfa86c63156ab.png" alt=""/>
+                <div class="dropdown">
+                    <img class="box" src="./assets/moto.png" alt="alt text" onclick="toggleDropdown()">
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">My Profile</a>
+                        <a href="#">My Investments</a>
+                        <a href="Unauth_Main.html">Log Out</a>
+                    </div>
+                </div>
+
+                <div class="wrapper5" style="--src:url(../assets/purchase.png)"></div>
+
+            </div>
+        </section>
+    </header>
+    <main class="profile main">
+        <section class="section2">
+            <div id="personalInfoContainer">
+             <div class="content_box1">
+                <div class="text">Phone Number (Optional)</div>
+                <div class="rect4" onclick="enablePhoneEdit()">
+                    <input type="text" class="phone-input" placeholder="Phone Number" value="777 761 9023" />
+                </div>
+                <div class="rect5"></div>
+
+                <h5 class="highlight31">+7</h5>
+             </div>
+             <div class="content_box11">
+                <h3 class="subtitle1">*</h3>
+                <div class="text1">Last Name</div>
+                <div class="rect6" onclick="enableLastEdit()">
+                    <input type="text" class="last-input" placeholder="Last Name" value="Ice" />
+                </div>
+                <h5 class="highlight33"></h5>
+             </div>
+             <div class="content_box14">
+                <div class="text4">Current password</div>
+                <div class="rect21" onclick="enableCurrentEdit()">
+                    <input type="password" class="currentP-input" placeholder="" value="Ice" />
+                </div>
+                <img class="image22" src="./assets/hide.png" alt="alt text" onclick="togglePasswordVisibility()" />
+             </div>
+
+             <div class="content_box12">
+                <div class="text2">Confirm new password</div>
+                <div class="rect2">
+                    <input type="password" class="confirmP-input" placeholder="" value="" /></div>
+                <img class="image2" src="./assets/hide.png" alt="alt text" />
+             </div>
+             <div class="content_box13">
+                <div class="text3">New password</div>
+                <div class="rect3">
+                    <input type="password" class="currentP-input" placeholder="" value="" />
+                </div>
+                <img class="image21" src="./assets/hide.png" alt="alt text" />
+             </div>
+
+          
+
+             <h3 class="subtitle">Password change</h3>
+             <div class="flex_col">
+                <div class="text5">Username (Optional)</div>
+                <div class="rect22" onclick="enableUsernEdit()">
+                    <input type="text" class="usern-input" placeholder="" value="" />
+                </div>
+             </div>
+             <div class="content_box15">
+                <h5 class="highlight2">Email address</h5>
+                <h3 class="subtitle11">*</h3>
+                <div class="rect2" onclick="enableEmailEdit()">
+                    <input type="text" class="email-input" placeholder="Your Email" value="tempest@gmail.com" />
+                </div>
+                <h5 class="highlight33"></h5>
+             </div>
+             <div class="content_box16">
+                <h5 class="highlight21">First Name</h5>
+                <h3 class="subtitle12">*</h3>
+                <div class="rect2" onclick="enableMotoEdit()">
+                  <input type="text" class="moto-input" placeholder="Your First Name" value="Moto" readonly  />
+                </div>
+                <h5 class="highlight34" id="highlight34"></h5>
+             </div>
+
+             <h3 class="subtitle2o">Personal Information</h3>
+            
+             <div class="section11">
+                <div class="text11">Photo</div>
+                <button class="content_box">
+                    <div class="text21">Change</div>
+                </button>
+                <div class="text31">Remove</div>
+                <img class="image3" src="./assets/moto.png" alt="alt text" />
+             </div>
+
+            <button class="content_box18">
+                <h3 class="subtitle21">Save changes</h3>
+            </button>
+
+
+             <div class="content_box17" id="accountDetailsBox">
+                 <div class="rect"></div>
+              
+                 <h4 class="highlight">My Account</h4>
+                 <div class="rect1" id="rect1"></div>
+                 <h5 class="highlight1_box">
+                     <span class="highlight1" onclick="moveRects()">
+                         <span class="highlight1_span0">Account Details<br /></span>
+                     </span>
+                 </h5>
+
+                 <div class="rect9" id="rect9"></div>
+             </div>
+            </div> 
+
+            <div id="responseContainer">
+             <div class="table-container" id="tableContainer" style="display: none;">
+                <table id="responseTable">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Type of specialty</th>
+                      <th>Date of application</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Open Bionics</td>
+                      <td>Backend Developer(Java)</td>
+                      <td>2014-03-21</td>
+                      <td>Processing</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                  </tbody>
+                 </table>
+               </div>
+            </div>
+
+        </section>
+
+        
+
+    </main>
+    <script type="text/javascript">
+        AOS.init();
+        new Sticky('.sticky-effect');
+
+        function enableMotoEdit() {
+            const motoInput = document.querySelector('.moto-input');
+            motoInput.removeAttribute('readonly');
+  
+  // Set cursor position to the end of the input text
+            motoInput.setSelectionRange(sidInput.value.length, sidInput.value.length);
+
+            motoInput.focus();
+}
+        function enableLastEdit() {
+            const lastInput = document.querySelector('.last-input');
+            lastInput.removeAttribute('readonly');
+  
+  // Set cursor position to the end of the input text
+            lastInput.setSelectionRange(lastInput.value.length, lastInput.value.length);
+
+            lastInput.focus();
+}
+        function enableUsernEdit() {
+            const usernInput = document.querySelector('.usern-input');
+            usernInput.removeAttribute('readonly');
+  
+  // Set cursor position to the end of the input text
+            usernInput.setSelectionRange(usernInput.value.length, usernInput.value.length);
+
+            usernInput.focus();
+}
+        function enableEmailEdit() {
+            const emailInput = document.querySelector('.email-input');
+            emailInput.removeAttribute('readonly');
+  
+  // Set cursor position to the end of the input text
+            emailInput.setSelectionRange(emailInput.value.length, emailInput.value.length);
+
+            emailInput.focus();
+}
+
+        function enablePhoneEdit() {
+            const phoneInput = document.querySelector('.phone-input');
+            phoneInput.removeAttribute('readonly');
+  
+  // Set cursor position to the end of the input text
+            phoneInput.setSelectionRange(phoneInput.value.length, phoneInput.value.length);
+
+            phoneInput.focus();
+}
+
+function enableCurrentEdit() {
+    const currentPInput = document.querySelector('.currentP-input');
+    currentPInput.removeAttribute('readonly');
+    currentPInput.focus();
+}
+
+function togglePasswordVisibility() {
+    const currentPInput = document.querySelector('.currentP-input');
+    const highlight4 = document.querySelector('.highlight4');
+    const image22 = document.querySelector('.image22');
+
+    if (currentPInput.type === 'password') {
+        currentPInput.type = 'text';
+        highlight4.textContent = currentPInput.value;
+        image22.src = "./assets/show.png";
+    } else {
+        currentPInput.type = 'password';
+        highlight4.textContent = '***********';
+        image22.src = "./assets/hide.png";
+    }
+}
+
+ 
+
+// Attach the enableSidEdit function to the click event of rect2
+//document.querySelector('.rect2').addEventListener('click', enableSidEdit);
+//         function moveRects() {
+//   const rect1 = document.getElementById("rect1");
+//   const rect9 = document.getElementById("rect9");
+
+//   var highlight1Span0 = document.querySelector('.highlight1_span0');
+//   var highlight1Span1 = document.querySelector('.highlight1_span1');
+
+//   // Toggle the 'moved' class to trigger the new positioning
+//   rect1.classList.toggle('moved');
+//   rect9.classList.toggle('moved');
+
+//   // Hide/show content based on the 'moved' class
+//   if (rect1.classList.contains('moved')) {
+//     // Hide content related to Account Details
+//     document.querySelector('.content_box1').style.display = 'none';
+//     document.querySelector('.content_box11').style.display = 'none';
+//     document.querySelector('.content_box12').style.display = 'none';
+//     document.querySelector('.content_box13').style.display = 'none';
+//     document.querySelector('.content_box14').style.display = 'none';
+//     document.querySelector('.content_box15').style.display = 'none';
+//     document.querySelector('.content_box16').style.display = 'none';
+//     document.querySelector('.content_box18').style.display = 'none';
+//     document.querySelector('.flex_col').style.display = 'none';
+//     document.querySelector('.section11').style.display = 'none';
+//     document.querySelector('.subtitle2o').style.display = 'none';
+
+//     // Add more content boxes as needed
+
+//     // Show the table
+//     document.querySelector('.table-container').style.display = 'block';
+
+//     // Change text color for My Requests
+//     highlight1Span1.style.color = '#65a9a6';
+//     // Change text color for Account Details
+//     highlight1Span0.style.color = '#717171';
+//   } else {
+//     // Show content related to Account Details
+//     document.querySelector('.content_box1').style.display = 'block';
+//     document.querySelector('.content_box11').style.display = 'block';
+//     document.querySelector('.content_box12').style.display = 'block';
+//     document.querySelector('.content_box13').style.display = 'block';
+//     document.querySelector('.content_box14').style.display = 'block';
+//     document.querySelector('.content_box15').style.display = 'block';
+//     document.querySelector('.content_box16').style.display = 'block';
+//     document.querySelector('.content_box18').style.display = 'block';
+//     document.querySelector('.flex_col').style.display = 'block';
+//     document.querySelector('.section11').style.display = 'block';
+//     document.querySelector('.subtitle2o').style.display = 'block';
+
+//     // Add more content boxes as needed
+
+//     // Hide the table
+//     document.querySelector('.table-container').style.display = 'none';
+
+//     // Change text color for Account Details
+//     highlight1Span0.style.color = '#65a9a6';
+//     // Reset text color for My Requests
+//     highlight1Span1.style.color = '#717171';
+//   }
+// }
+
+// document.getElementById('myResponseLink').addEventListener('click', function() {
+//   // Get the position of the "content_box17" element
+//   var contentBox17Position = document.querySelector('.content_box17').offsetTop;
+
+//   // Calculate the margin top for the responseContainer
+//   var marginTop = contentBox17Position + 10; // Adjust this value based on your design
+
+//   // Set the margin top of the table container
+//   document.getElementById('responseContainer').style.marginTop = marginTop + 'px';
+
+//   // Show the table container
+//   document.getElementById('responseContainer').style.display = 'block';
+
+//   // If needed, call moveRects() or any other functions related to content visibility
+//   moveRects();
+// });
+    </script>
+</body>
+
+</html>
