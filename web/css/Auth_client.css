@@ -424,8 +424,45 @@
     display: flex;
     flex-direction: column;
     min-height: 745px;
+
     position: relative;
   }
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 0; /* Adjust the vertical margin between the cards */
+}
+  .main .event-card {
+    display: flex;
+    flex-direction: row;
+    height: 474px;
+    position: relative;
+    width: 366px;
+    margin: 0 20px; /* Adjust the horizontal margin between the cards */
+}
+
+.main .event-card:first-child {
+    top: 205px;
+    left: 110px; /* Adjust the left position */
+}
+
+.main .event-card:nth-child(2) {
+    top: -268px;
+    left: 522px; /* Adjust the left position */
+    
+}
+
+.main .event-card:nth-child(3) {
+    top: -743px;
+    left: 932px; /* Adjust the left position */
+}
+
+.tayo {
+  margin-top: -520px; /* Adjust the top margin as needed */
+}
+
+
   .main .rect2 {
     background-color: #ff8055;
     bottom: 35px;
@@ -558,6 +595,8 @@
     position: absolute;
     top: 26px;
     width: 1192px;
+    margin-top: 20px
+    
   }
   .main .content_box11 {
     display: flex;
